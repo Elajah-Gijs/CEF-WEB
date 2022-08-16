@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { FormControl,FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
+import { UntypedFormControl,UntypedFormBuilder, UntypedFormGroup, UntypedFormArray, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-forms',
@@ -11,30 +11,30 @@ export class FormsComponent implements OnInit {
 
   title = 'FORM'
 
-  profileForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    tel: new FormControl(''),
-    email: new FormControl(''),
-    address: new FormGroup({
-      street: new FormControl(''),
-      city: new FormControl(''),
-      state: new FormControl(''),
-      zip: new FormControl('')
+  profileForm = new UntypedFormGroup({
+    firstName: new UntypedFormControl(''),
+    lastName: new UntypedFormControl(''),
+    tel: new UntypedFormControl(''),
+    email: new UntypedFormControl(''),
+    address: new UntypedFormGroup({
+      street: new UntypedFormControl(''),
+      city: new UntypedFormControl(''),
+      state: new UntypedFormControl(''),
+      zip: new UntypedFormControl('')
     })
   });
 
 
-  public churchForm: FormGroup;
+  public churchForm: UntypedFormGroup;
 
-  constructor(private _fb: FormBuilder) {
+  constructor(private _fb: UntypedFormBuilder) {
     this.churchForm = this._fb.group({
       churches: this._fb.array([this.addChurchGroup()])
     });
   }
 
   //Append Fields Set
-  private addChurchGroup(): FormGroup {
+  private addChurchGroup(): UntypedFormGroup {
     return this._fb.group({
       churchName: [],
       street: [],
@@ -59,12 +59,12 @@ export class FormsComponent implements OnInit {
     } 
 
     //Fields Array
-    get churchArray(): FormArray {
-      return <FormArray>this.churchForm.get('churches');
+    get churchArray(): UntypedFormArray {
+      return <UntypedFormArray>this.churchForm.get('churches');
     }    
 
   ngOnInit() {
-    this.profileForm = new FormGroup({
+    this.profileForm = new UntypedFormGroup({
 
     });
 
