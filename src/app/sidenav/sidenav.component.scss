@@ -3,7 +3,7 @@
   }
   
   .sidenav {
-    width: 250px;
+    width: 320px;
   }
   
   .sidenav .mat-toolbar {
@@ -95,5 +95,23 @@ a{
 }
 
 .title-center {
-  margin: 0 auto;
+  position: left;
+  padding: 15px 5px 5px 5px;
+}
+
+.title-name span{
+  color: white;
+  display: block;
+  height: 15px;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.title-text{
+  font-size: 15px;
+}
+
+.title-subtext{
+  font-size: 11px;
 }

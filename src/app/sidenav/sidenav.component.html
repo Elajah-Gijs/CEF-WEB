@@ -5,6 +5,10 @@
         [opened]="(isHandset$ | async) === false">
       <mat-toolbar id="logo">
         <span class="title-center"><img class="pic" src="/assets/white-cef-logo.png" alt="CEF Logo"></span>
+        <div class="title-name">
+          <span class="title-text">Child Evangelism Fellowship</span>
+          <span class="title-subtext">of philadelphia county, inc.</span>
+        </div>
       </mat-toolbar>
       <mat-nav-list>
         <div class="side-nav-content">
@@ -29,7 +33,7 @@
           *ngIf="isHandset$ | async">
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
-        <span>CEF of Philadelphia</span>
+        <span></span>
         <span class="example-spacer"></span>
             <div class="profile-logo dropstart">
               <nav class="navbar navbar-expand-lg navbar-light">
@@ -44,22 +48,20 @@
                           data-mdb-toggle="dropdown"
                           aria-expanded="false"
                           id="profile-name"
-                        > <label for="profile-name">Lucas</label>
+                        > <label for="profile-name">Account</label>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
                           <li>
-                            <a class="dropdown-item" href="#">My profile</a>
+                            <a class="dropdown-item" routerLink="account">My profile</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#">Settings</a>
-                          </li>
-                          <li>
-                            <a outerLink="login" class="dropdown-item" href="#">Logout</a>
+                            <a routerLink="login" class="dropdown-item" href="#">Logout</a>
                           </li>
                         </ul>
                       </li>
                     </ul> -->
-                    <a routerLink="login" style="float: right;" class="menulink">Logout</a>
+                    <a routerLink="account" style="float: right;" class="menulink">Account</a>
+
                   </div>
                 </nav>
           </div>

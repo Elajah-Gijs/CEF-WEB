@@ -12,6 +12,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { LoginComponent } from './core/login/login.component';
 import { AuthGuard } from './service/auth.guard';
 import { HomeComponent } from './home/home.component';
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
   {path: '', component: SidenavComponent, canActivate:[AuthGuard]},
@@ -27,6 +28,7 @@ const routes: Routes = [
       {path:'donations', component:DonationsComponent},
       {path:'media', component:MediaComponent},
       {path:'resources', component:ResourcesComponent},
+      {path:'account', component:AccountComponent},
     ], canActivate:[AuthGuard]
   }
   

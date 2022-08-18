@@ -21,6 +21,7 @@ import { AuthService } from './service/auth.service';
 import { AuthGuard } from './service/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { TokenInterceptorService } from './service/token-interceptor.service';
+import { AccountComponent } from './account/account.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { TokenInterceptorService } from './service/token-interceptor.service';
     MediaComponent,
     ResourcesComponent,
     HomeComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
